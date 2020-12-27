@@ -31,3 +31,10 @@ res = requests.get("http://"+NAS_HOST+":"+NAS_PORT+"/webapi/entry.cgi?api=SYNO.S
 res_native = json.loads(res.text)
 print res_native['data']['cameras'][0]['enabled']
 
+# ENABLE Camera
+
+# curl -iv "http://nas:5000/webapi/entry.cgi?api=SYNO.SurveillanceStation.Camera&method=Enable&version=9&idList=2&_sid=xxxxxxxx"
+
+# DISABLE Camera
+# curl -iv "http://nas:5000/webapi/entry.cgi?api=SYNO.SurveillanceStation.Camera&method=Enable&version=9&idList=2&_sid=xxxxxxx"
+
