@@ -31,10 +31,10 @@ print(camera)
 
 res = requests.get("http://"+NAS_HOST+":"+NAS_PORT+"/webapi/entry.cgi?api=SYNO.SurveillanceStation.Camera&method=GetInfo&version=1&cameraIds=2&_sid="+sid)
 res_native = json.loads(res.text)
-print res_native['data']['cameras']
+print(res_native['data']['cameras'])
 
 # ENABLED OR NOT ?
-print res_native['data']['cameras'][0]['enabled']
+print(res_native['data']['cameras'][0]['enabled'])
 
 # ENABLE Camera
 
