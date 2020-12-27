@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+# thanks Loutor for idea !  https://www.loutor.org/2018/02/08/home-mode-avec-surveillance-station/
+
 import json
 import os
 import requests
