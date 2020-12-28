@@ -36,10 +36,13 @@ print(res_native['data']['cameras'])
 # ENABLED OR NOT ?
 print(res_native['data']['cameras'][0]['enabled'])
 
-# ENABLE Camera
+# ENABLE Camera (change idList by your own CameraID)
 
-# curl -iv "http://nas:5000/webapi/entry.cgi?api=SYNO.SurveillanceStation.Camera&method=Enable&version=9&idList=2&_sid=xxxxxxxx"
+res = requests.get("http://"+NAS_HOST+":"+NAS_PORT+"//webapi/entry.cgi?api=SYNO.SurveillanceStation.Camera&method=Enable&version=9&idList=2&_sid="+sid)
+res_native = json.loads(res.text)
 
-# DISABLE Camera
-# curl -iv "http://nas:5000/webapi/entry.cgi?api=SYNO.SurveillanceStation.Camera&method=Enable&version=9&idList=2&_sid=xxxxxxx"
+# DISABLE Camera (change idList by your own CameraID)
+
+res = requests.get("http://"+NAS_HOST+":"+NAS_PORT+"//webapi/entry.cgi?api=SYNO.SurveillanceStation.Camera&method=Disable&version=9&idList=2&_sid="+sid)
+res_native = json.loads(res.text)
 
